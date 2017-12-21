@@ -1,0 +1,22 @@
+[user]
+    name = koka
+    email = koka.code@gmail.com
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+[ghq]
+    root = ~/Documents/src/go/src
+[core]
+    editor = /usr/local/bin/vim
+    excludesfile = /Users/koka/dotfiles/gitignore_global
+    attributesfile = /Users/koka/dotfiles/gitattributes_global
+[credential]
+    helper = store
+[push]
+    default = simple
+[github]
+	user = koka831
+[ghi]
+	token = 751cf9cde22a3a8fd8807929fa346e96cf29aa0b
