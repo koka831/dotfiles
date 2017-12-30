@@ -50,5 +50,7 @@ bindkey '\C-h' backward-char
 bindkey '\C-l' forward-char
 bindkey '\C-f' forward-word
 bindkey '\C-b' backward-word
+bindkey '\C-r' peco-select-history
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+safe_load $DOTPATH/shrc/10_peco.zsh
+
