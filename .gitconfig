@@ -10,7 +10,7 @@
     root = ~/Documents/src/go/src
 [core]
     editor = /usr/local/bin/vim
-    excludesfile = /Users/koka/dotfiles/gitignore_global
+    excludesfile = /home/koka/dotfiles/gitignore_global
     attributesfile = /Users/koka/dotfiles/gitattributes_global
 [credential]
     helper = store
