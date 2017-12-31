@@ -177,3 +177,6 @@ on_ft = ['hs', 'haskell']
 repo = 'posva/vim-vue'
 on_ft = ['vue']
 
+[[plugins]]
+repo = 'vhda/verilog_systemverilog.vim'
+on_ft = ['v']
