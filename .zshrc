@@ -51,4 +51,4 @@ bindkey '\C-l' forward-char
 bindkey '\C-f' forward-word
 bindkey '\C-b' backward-word
 
-source $HOME/.fzf.zsh
+safe_load $HOME/.fzf.zsh
