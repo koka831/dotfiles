@@ -7,8 +7,9 @@ source "$HOME/dotfiles/etc/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 typeset -A ZSH_HIGHLIGHT_STYLES
 
 autoload -Uz compinit
-compinit
+compinit -u
 zstyle ':completion:*:default' menu select=2
+zstyle ':completion:*' verbose yes
 autoload colors
 colors
 
@@ -35,16 +36,20 @@ ZSH_HIGHLIGHT_STYLES[arg0]='fg=yellow'
 ZSH_HIGHLIGHT_STYLES[path]='fg=red'
 ZSH_HIGHLIGHT_STYLES[globbing]='none'
 
-setopt AUTO_CD
+setopt auto_cd
 setopt auto_param_slash
 setopt list_types
 setopt interactive_comments
 setopt no_flow_control
 setopt share_history
+setopt hist_ignore_all_dups
+setopt inc_append_history
+setopt auto_pushd
+setopt hist_expand
 
 alias cdb='cd-bookmark'
 
-bindkey '^P' history-beginning-search-backward
+bindkey '\C-p' history-beginning-search-backward
 bindkey '\C-a' beginning-of-line
 bindkey '\C-e' end-of-line
 bindkey '\C-h' backward-char
