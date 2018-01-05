@@ -40,6 +40,7 @@ setopt auto_param_slash
 setopt list_types
 setopt interactive_comments
 setopt no_flow_control
+setopt share_history
 
 alias cdb='cd-bookmark'
 
