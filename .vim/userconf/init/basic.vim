@@ -25,6 +25,7 @@ set ignorecase
 set incsearch
 set hlsearch
 set list
+set history=200
 set timeout timeoutlen=1000 ttimeoutlen=50
 set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲
 " for msgline
