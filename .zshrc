@@ -15,7 +15,7 @@ colors
 # zsh plugin manager
 export ZPLUG_HOME=$HOME/.zplug
 source $ZPLUG_HOME/init.zsh
-source ~/dotfiles/conf/plugins.zsh
+source $HOME/dotfiles/conf/plugins.zsh
 
 # for zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
@@ -29,7 +29,7 @@ zstyle ':vcs_info:git:*' stagedstr "%F{blue}!"
 zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
 zstyle ':vcs_info:git:*' actionformats '[%b]%c%u<!%a>'
 precmd () { vcs_info }
-RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
+RPROMPT='${vcs_info_msg_0_}'
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 ZSH_HIGHLIGHT_STYLES[arg0]='fg=yellow'
 ZSH_HIGHLIGHT_STYLES[path]='fg=red'
