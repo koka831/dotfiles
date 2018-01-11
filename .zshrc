@@ -18,8 +18,7 @@ export ZPLUG_HOME=$HOME/.zplug
 source $ZPLUG_HOME/init.zsh
 source $HOME/dotfiles/conf/plugins.zsh
 
-# for zsh-completions
-fpath=(/usr/local/share/zsh-completions $fpath)
+fpath+=~/.zfunc
 export TERM='screen-256color'
 # for git repo status
 autoload -Uz vcs_info
