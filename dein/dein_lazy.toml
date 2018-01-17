@@ -178,5 +178,9 @@ repo = 'posva/vim-vue'
 on_ft = ['vue']
 
 [[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = ['ts', 'typescript']
+
+[[plugins]]
 repo = 'vhda/verilog_systemverilog.vim'
 on_ft = ['v']
