@@ -2,7 +2,7 @@
 
 zplug "zsh-users/zsh-completions"
 zplug "junegunn/fzf-bin", as:command, from:gh-r, name:fzf
-zplug "b4b4r07/enhancd", use:init.sh
+# zplug "b4b4r07/enhancd", use:init.sh
 zplug "mollifier/cd-bookmark"
 zplug "marzocchi/zsh-notify"
 zplug "soimort/translate-shell"
