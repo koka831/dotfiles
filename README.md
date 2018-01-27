@@ -1,5 +1,7 @@
 .
 
+![](./screenshot.png)
+
 ### target
 currently it's only for linux
 
