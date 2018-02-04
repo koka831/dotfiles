@@ -11,7 +11,7 @@ alias l='ls -lha --color=auto'
 # alias ls='ls -lha --color=auto'
 alias la='ls -lha --color=auto'
 alias md='mdless'
-alias ssh=~/dotfiles/etc/scripts/ssh-change-prompt.sh
+# alias ssh=~/dotfiles/etc/scripts/ssh-change-prompt.sh
 alias subl='reattach-to-user-namespace subl'
 alias tree='tree -C'
 alias t='tig'
