@@ -184,3 +184,12 @@ on_ft = ['ts', 'typescript']
 [[plugins]]
 repo = 'vhda/verilog_systemverilog.vim'
 on_ft = ['v']
+
+[[plugins]]
+repo = 'slim-template/vim-slim'
+on_ft = ['slim']
+
+
+[[plugins]]
+repo = 'b4winckler/vim-objc'
+on_ft = ['objc']
