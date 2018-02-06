@@ -34,6 +34,9 @@ set cmdheight=1
 set fillchars-=vert:\| | set fillchars+=vert:\ 
 set rtp+=/usr/local/opt/fzf
 
+" for :vimgrep
+set grepprg=grep\ -rnI\ --exclude-dir=.git\ --exclude-dir=node_modules\ --exclude-rir=vendor
+
 autocmd QuickfixCmdPost make,grep,grepadd,vimgrep if len(getqflist()) != 0 | copen | endif
 
 autocmd BufNewFile $HOME/src/github/weekly/*.md 0r $HOME/.vim/template/weekly.template
