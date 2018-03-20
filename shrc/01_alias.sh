@@ -7,6 +7,7 @@ alias g='git'
 alias gc='git commit -v'
 alias gs='git status -s'
 alias grm='git rm --cached `git ls-files --full-name -i --exclude-from=.gitignore`'
+alias git_remove_merged="git branch --merged | grep -vE '^\*|master$|develop$' | xargs -I % git branch -d %"
 alias l='ls -lha --color=auto'
 # alias ls='ls -lha --color=auto'
 alias la='ls -lha --color=auto'
