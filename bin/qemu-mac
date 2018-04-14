@@ -1,0 +1,6 @@
+#!bin/bash
+# https://qiita.com/syu_chan_1005/items/084b3c0679c3b3940595
+# put iso file to $HOME/chroot/highsierra/macOS
+
+sudo docker run -d --name macOS --device /dev/kvm:/dev/kvm -p 5900:5900 \
+  -v $HOME/chroot/highsierra:/data syuchan1005/osx-kvm
