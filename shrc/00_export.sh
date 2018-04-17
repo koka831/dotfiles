@@ -23,6 +23,8 @@ export KUBECONFIG=$HOME/.kube/config
 # sqlite
 export PATH="$HOME/.scalaenv/bin:$PATH"
 eval "$(scalaenv init -)"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 # codeprep
 export CODEPREP_BACKEND_PATH=$HOME/Documents/src/givery/codeprep/codeprep-backend
@@ -52,5 +54,5 @@ export MDV_CODE_THEME=all
 ## export mycommand
 export PATH="$HOME/src/givery/codeprep/codeprep_contents_generator:$PATH"
 export CODEPREP_TEMPLATE_PATH="$HOME/src/givery/codeprep/codeprep_contents_generator"
-
+## e
 
