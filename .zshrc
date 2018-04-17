@@ -57,3 +57,5 @@ bindkey '\C-f' forward-word
 bindkey '\C-b' backward-word
 
 safe_load $HOME/.fzf.zsh
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
