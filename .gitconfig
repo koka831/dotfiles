@@ -12,6 +12,7 @@
     editor = /usr/local/bin/vim
     excludesfile = /home/koka/dotfiles/gitignore_global
     attributesfile = /home/koka/dotfiles/gitattributes_global
+	autocrlf = input
 [credential]
     helper = store
 [push]
