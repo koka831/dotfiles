@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -eu
 
 if [[ -z $@ ]]; then
     OPTIONS="Lock\nLogout\nReboot\nSuspend\nShutdown"

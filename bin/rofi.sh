@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eu
 
 # opacity 00~FF
 alpha="CC"
@@ -11,7 +12,6 @@ modi="run,window,system:$HOME/dotfiles/bin/rofi_system_menu.sh,combi"
 
 options=(
   -modi         "$modi"
-  -combi-modi   "$modi"
   -show         "run"
   -font         "Roboto Mono Regular 16"
   -width        "1000"
@@ -37,6 +37,5 @@ options=(
   -color-active    "argb:00000000, argb:${alpha}${white}, argb:00000000, argb:${alpha}d79921, argb:${alpha}3c3836"
   -color-urgent    "argb:00000000, argb:${alpha}9d0006, argb:00000000, argb:${alpha}8f3f71, argb:${alpha}d3869b"
 )
-
 
 exec rofi "$@" "${options[@]}"
