@@ -6,17 +6,15 @@ source "$HOME/dotfiles/etc/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 typeset -A ZSH_HIGHLIGHT_STYLES
 
-autoload -Uz compinit
-compinit -u
-zstyle ':completion:*:default' menu select=2
-zstyle ':completion:*' verbose yes
-autoload colors
-colors
-
 # zsh plugin manager
 export ZPLUG_HOME=$HOME/.zplug
 source $ZPLUG_HOME/init.zsh
 source $HOME/dotfiles/conf/plugins.zsh
+
+zstyle ':completion:*:default' menu select=2
+zstyle ':completion:*' verbose yes
+autoload colors
+colors
 
 fpath+=~/.zfunc
 export TERM='screen-256color'

@@ -1,18 +1,18 @@
 # zplug install list
 
 zplug "zsh-users/zsh-completions"
-zplug "junegunn/fzf-bin", as:command, from:gh-r, name:fzf
+zplug "junegunn/fzf-bin", as:command, from:gh-r
 # zplug "b4b4r07/enhancd", use:init.sh
 zplug "mollifier/cd-bookmark"
 zplug "marzocchi/zsh-notify"
 zplug "soimort/translate-shell"
 
-if ! zplug check --verbose; then
-    printf "install zplugin? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
+#if ! zplug check --verbose; then
+#    printf "install zplugin? [y/N]: "
+#    if read -q; then
+#        echo; zplug install
+#    fi
+#fi
 
 zplug load --verbose
 
