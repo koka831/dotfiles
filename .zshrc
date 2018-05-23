@@ -1,5 +1,5 @@
 # The following lines were added by compinstall
-zstyle :compinstall filename "$HOME/.zshrc"
+# zstyle :compinstall filename "$HOME/.zshrc"
 source "$HOME/.bash_profile"
 source "$HOME/dotfiles/dein/repos/github.com/morhetz/gruvbox/gruvbox_256palette.sh"
 source "$HOME/dotfiles/etc/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
