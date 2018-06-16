@@ -28,30 +28,22 @@ repo = 'Shougo/vimproc.vim'
 build = 'make'
 
 [[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-
-# for snippet
-#[[plugins]]
-#repo = 'Shougo/neocomplete'
-#hook_add = '''
-#let g:acp_enableAtStartup = 0
-#" Use neocomplete.
-#let g:neocomplete#enable_at_startup = 1
-#" Use smartcase.
-#let g:neocomplete#enable_smart_case = 1
-#" Set minimum syntax keyword length.
-#let g:neocomplete#sources#syntax#min_keyword_length = 3
-#'''
+repo = 'kshenoy/vim-signature'
 
 [[plugins]]
-repo = 'roxma/nvim-yarp'
+repo = 'prabirshrestha/vim-lsp'
+
 
 [[plugins]]
 repo = 'roxma/vim-hug-neovim-rpc'
 
 [[plugins]]
+repo = 'roxma/nvim-yarp'
+
+[[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
+let g:python3_host_prog = '/usr/bin/python3'
 let g:deoplete#enable_at_startup = 1
 '''
 
