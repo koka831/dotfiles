@@ -1,6 +1,8 @@
 " Language:     Python
 " Filenames:    *.py
 let g:ale_python_flake8_options="--ignore=E501"
+" dirty hack
+let g:ale_set_quickfix = 0
 
 " additional syntax highlighting
 highlight link pythonFunction GruvboxGreen
@@ -16,7 +18,7 @@ highlight link pythonClass GruvboxYellow
 
 
 " library
-syn keyword pythonLibName sys math unittest TestCase enum Enum numpy np cv2 datetime shutil time
+syn keyword pythonLibName os sys math unittest TestCase enum Enum numpy np cv2 datetime shutil time
 syn keyword pythonLibName collections Counter tqdm simplejson tqdm
 syn keyword pythonLibName pandas pd Series DataFrame
 syn keyword pythonLibName matplotlib scipy requests beautifulsoup
