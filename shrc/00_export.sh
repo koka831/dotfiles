@@ -10,6 +10,7 @@ export PATH="/opt/gradle/gradle-3.4.1/bin:$PATH"
 #neovim
 export XDG_CONFIG_HOME="$HOME/.config"
 export LD_LIBRARY_PATH=$(rustc --print sysroot)/lib:$LD_LIBRARY_PATH
+export BAT_CONFIG_DIR=$(bat cache --config-dir)
 #nodeblew
 # export PATH=$HOME/.nodebrew/current/bin:$PATH
 # for kubernetes
