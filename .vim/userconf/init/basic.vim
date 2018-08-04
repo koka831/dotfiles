@@ -25,6 +25,9 @@ set ignorecase
 set incsearch
 set hlsearch
 set list
+" set preview window position to below/right
+set splitbelow
+set splitright
 set history=200
 set timeout timeoutlen=1000 ttimeoutlen=50
 set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲
