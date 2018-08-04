@@ -7,6 +7,7 @@ inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
 map <C-n> :NERDTreeToggle<CR>
+nmap <C-p> <Plug>AirlineSelectPrevTab
 map <C-h> :Unite file_mru<CR>
 map <C-t> :TagbarToggle<CR>
 nnoremap <silent> <C-o> :<C-u>Unite -auto-preview outline<CR>
