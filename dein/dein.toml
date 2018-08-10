@@ -36,13 +36,15 @@ repo = 'kshenoy/vim-signature'
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 
-
 [[plugins]]
 repo = 'roxma/vim-hug-neovim-rpc'
 
 [[plugins]]
 repo = 'roxma/nvim-yarp'
 
+# requires:
+# vim-hug-neovim-rpc
+# nvim-yarp
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
