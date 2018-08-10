@@ -87,12 +87,27 @@ repo = 'hail2u/vim-css3-syntax'
 on_ft = ['css']
 
 [[plugins]]
-repo = 'othree/yajs.vim'
-on_ft = ['javascript']
+repo = 'pangloss/vim-javascript'
+on_ft = ['javascript', 'typescript', 'javascript.jsx']
 
 [[plugins]]
-repo = 'mxw/vim-jsx'
-on_ft = ['jsx', 'js', 'javascript']
+repo =  'leafgarland/typescript-vim'
+on_ft = ['javascript', 'typescript', 'javascript.jsx']
+
+[[plugins]]
+repo = 'maxmellon/vim-jsx-pretty'
+on_ft = ['javascript', 'typescript', 'javascript.jsx']
+hook_add = '''
+let g:vim_jsx_pretty_colorful_config = 1
+'''
+
+[[plugins]]
+repo =  'othree/javascript-libraries-syntax.vim'
+on_ft = ['javascript', 'typescript', 'javascript.jsx']
+
+[[plugins]]
+repo =  'othree/es.next.syntax.vim'
+on_ft = ['javascript', 'typescript', 'javascript.jsx']
 
 [[plugins]]
 repo = 'derekwyatt/vim-scala'
@@ -149,7 +164,7 @@ repo = 'andviro/flake8-vim'
 on_ft = 'python'
 
 [[plugins]]
-repo = 'elixir-lang/vim-elixir'
+repo = 'elixir-editors/vim-elixir'
 on_ft = ['exs', 'ex', 'elixir']
 
 
