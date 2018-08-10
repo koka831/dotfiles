@@ -1,41 +1,19 @@
 #!/usr/bin/env bash
 
-xrandr -q | grep -wv eDP1 | grep connected | \
-while read line; do
-    output=$(echo "$line" | awk -F' ' '{print $1}')
+/usr/bin/notify-send "detected!"
 
-    connected=$(echo "$line" | grep -w "connected")
-    activated=$(echo "$line" | grep "connected [0-9]")
-
-    if [[ ! -z "$connected" ]]; then
-        echo "    ${output} "
-
-        if [[ ! -z "$activated" ]]; then
-            [[ -z "${BLOCK_BUTTON}" ]] || {
-                xrandr --output "${output}" --off
-                pkill -RTMIN+4 i3blocks
-            }
-        else
-            [[ -z "${BLOCK_BUTTON}" ]] || {
-                xrandr --auto
-                xrandr --output "${output}" --right-of eDP1
-                pkill -RTMIN+4 i3blocks
-            }
-
-            exit 33
-        fi
-
-        exit 0
-    else
-        if [[ ! -z "$activated" ]]; then
-            echo "    ${output} "
-
-            [[ -z "${BLOCK_BUTTON}" ]] || {
-                xrandr --output "${output}" --off
-                pkill -RTMIN+4 i3blocks
-            }
-
-            exit 33
-        fi
-    fi
+for display in $(xrandr | grep '\Wconnected' | awk '{ print $1 }'); do
+  echo $display
+  notify-send "$display detected!"
 done
+
+if $(xrandr | grep -q 'HDMI-1 connected') ; then
+  echo 'connected'
+  xrandr --output eDP-1 --auto --primary --dpi 180 --output HDMI-1 --auto --dpi 165
+else
+  echo 'disconnected'
+  xrandr --output eDP-1 --auto --primary --dpi 180
+fi
+
+killall polybar
+exec /usr/local/bin/polybar header
