@@ -1,13 +1,12 @@
+# requires:
+# vim-hug-neovim-rpc
+# nvim-yarp
 [[plugins]]
-repo = 'Shougo/unite.vim'
-
-### Language Server
-[[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-
-[[plugins]]
-repo = 'Shougo/neomru.vim'
-on_source = ['unite.vim']
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+let g:python3_host_prog = '/usr/bin/python3'
+let g:deoplete#enable_at_startup = 1
+'''
 
 ### C
 [[plugins]]
