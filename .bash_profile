@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # _         _
 #| | _____ | | ____ _
 #| |/ / _ \| |/ / _` |
@@ -14,7 +15,7 @@ function safe_load() {
   fi
 }
 
-safe_load $DOTPATH/shrc/00_export.sh
-safe_load $DOTPATH/shrc/01_alias.sh
-safe_load $DOTPATH/shrc/02_util.sh
-safe_load $DOTPATH/shrc/03_secret.sh
+for conf in `find $DOTPATH/shrc/*.sh`; do
+  safe_load $conf
+  echo "$conf loaded\n"
+done
