@@ -12,12 +12,14 @@
     editor = /usr/local/bin/vim
     excludesfile = /home/koka/dotfiles/gitignore_global
     attributesfile = /home/koka/dotfiles/gitattributes_global
-	autocrlf = input
+    autocrlf = input
 [credential]
     helper = store
 [push]
     default = simple
 [github]
-	user = koka831
+    user = koka831
+[init]
+    templatedir = $HOME/dotfiles/.git_template
 [ghi]
-	token = 751cf9cde22a3a8fd8807929fa346e96cf29aa0b
+    token = 751cf9cde22a3a8fd8807929fa346e96cf29aa0b
