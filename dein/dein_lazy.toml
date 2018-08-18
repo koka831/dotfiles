@@ -149,6 +149,15 @@ repo = 'davidhalter/jedi-vim'
 on_ft = 'python'
 
 [[plugins]]
+repo = 'lambdalisue/vim-django-support'
+on_ft = 'python'
+
+[[plugins]]
+repo = 'plytophogy/vim-virtualenv'
+on_ft = 'python'
+depends = ['jedi-vim']
+
+[[plugins]]
 repo = 'andviro/flake8-vim'
 on_ft = 'python'
 

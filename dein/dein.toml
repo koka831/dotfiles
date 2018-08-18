@@ -42,11 +42,9 @@ repo = 'roxma/vim-hug-neovim-rpc'
 [[plugins]]
 repo = 'roxma/nvim-yarp'
 
-# requires:
-# vim-hug-neovim-rpc
-# nvim-yarp
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
+depends = ['vim-hug-neovim-rpc', 'nvim-yarp']
 hook_add = '''
 let g:python3_host_prog = '/usr/bin/python3'
 let g:deoplete#enable_at_startup = 1
@@ -99,16 +97,34 @@ let g:hier_enabled = 1
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
+depends = ['vim-fugitive']
 hook_add = '''
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
 let g:airline_theme = 'gruvbox'
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#ale#enabled = 1
+let g:airline_symbols.branch = 'ᚠ'
+let g:airline#extensions#default#layout = [
+    \ ['a', 'b', 'c'],
+    \ ['x', 'y', 'z', 'error', 'warning']
+\ ]
+
+call airline#parts#define_accent('virtualenv', 'yellow')
+let g:airline_section_x = airline#section#create(['%{&filetype}'])
+let g:airline_section_y = airline#section#create(['ffenc'])
+let g:airline_section_z = airline#section#create(
+    \ ['㏑: %l', ' c: %c']
+\ )
 
 function! AirlineThemePatch(palette)
-  let a:palette.accents.running = ['', '', '', '', '']
+  let a:palette.accents.running = ['#98971a', '', 'green', '', '']
   let a:palette.accents.success = ['#98971a', '', 'green', '', '']
   let a:palette.accents.failure = ['#9d0006', '', 'red', '', '']
+  let a:palette.accents.yellow = ['#d79921', '', 'yellow', '', 'bold']
 endfunction
 let g:airline_theme_patch_func = 'AirlineThemePatch'
 '''
@@ -135,6 +151,25 @@ let NERDTreeShowHidden=1
 '''
 
 [[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+depends = ['NERDTree']
+hook_add = '''
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "~",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : 'i',
+    \ "Unknown"   : "?"
+    \ }
+'''
+
+
+[[plugins]]
 repo = 'tpope/vim-fugitive'
 
 
@@ -152,12 +187,14 @@ let g:quickrun_config._ = {
     \ 'outputter/buffer/close_on_empty': 1,
     \ 'cpp' : {
     \   'type' : 'cpp/g++',
-    \   'cmdopt' : '-Wall -pedantic',
-    \   },
+    \   'cmdopt' : '-Wall -pedantic'
+    \  },
     \ 'python': {
-    \   'command': 'python3'
+    \   'command': 'pipenv run python'
     \   }
     \ }
 au FileType qf nnoremap <silent><buffer>q :quit<CR>
 '''
 
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
