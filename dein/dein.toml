@@ -42,6 +42,17 @@ repo = 'roxma/vim-hug-neovim-rpc'
 [[plugins]]
 repo = 'roxma/nvim-yarp'
 
+# requires:
+# vim-hug-neovim-rpc
+# nvim-yarp
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+let g:python3_host_prog = '/usr/bin/python3'
+let g:deoplete#enable_at_startup = 1
+'''
+
+
 # for :mks
 [[plugins]]
 repo = 'tpope/vim-obsession'
