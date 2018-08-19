@@ -20,6 +20,13 @@
 [github]
     user = koka831
 [init]
-    templatedir = $HOME/dotfiles/.git_template
+    templatedir = /home/koka/dotfiles/.git_template
 [ghi]
     token = 751cf9cde22a3a8fd8807929fa346e96cf29aa0b
+[secrets]
+    providers = git secrets --aws-provider
+    patterns = [A-Z0-9]{20}
+    patterns = (\"|')?(AWS|aws|Aws)?_?(SECRET|secret|Secret)?_?(ACCESS|access|Access)?_?(KEY|key|Key)(\"|')?\\s*(:|=>|=)\\s*(\"|')?[A-Za-z0-9/\\+=]{40}(\"|')?
+    patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?
+    allowed = AKIAIOSFODNN7EXAMPLE
+    allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
