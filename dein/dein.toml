@@ -230,3 +230,6 @@ repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
 repo = 'ap/vim-css-color'
+
+[[plugins]]
+repo = 'tpope/vim-commentary'
