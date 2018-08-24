@@ -12,6 +12,7 @@ autocmd colorscheme * highlight GitGutterChangeDelete ctermbg=none ctermfg=blue
 
 autocmd colorscheme * highlight ALEErrorSign ctermbg=none ctermfg=red
 autocmd colorscheme * highlight ALEWarningSign ctermbg=none ctermfg=yellow
+autocmd colorscheme * highlight ALEErrorLine ctermbg=none ctermfg=yellow
 
 colorscheme gruvbox
 let g:lightline = {}
