@@ -54,3 +54,11 @@ export LESS_TERMCAP_ue=$'\E[0m'          # Ends underline.
 export LESS_TERMCAP_us=$'\E[01;32m'      # Begins underline.
 
 export MDV_CODE_THEME=all
+
+# fzf
+export FZF_DEFAULT_OPTS='
+  --reverse
+  --color=spinner:#d79921,hl:#d79921,hl+:#9d0006,fg+:#d5c4a1
+  --color=fg:#ebdbb2,header:#98971a,info:#458588,pointer:#d79921
+  --color=marker:#98971a,prompt:#a89984
+'

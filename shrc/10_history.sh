@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 # https://qiita.com/wada811/items/78b14181a4de0fd5b497
 function peco-select-history() {
   local tac

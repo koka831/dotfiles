@@ -48,9 +48,9 @@ function s2u() {
 }
 
 # for procon i/o testcase
-function iotest() {
-    for f in test/*.in ; do ; colordiff <(cat $f | ./a.out) ${f%.in}.out ; done
-}
+#function iotest() {
+#    for f in test/*.in ; do ; colordiff <(cat $f | ./a.out) ${f%.in}.out ; done
+#}
 
 function fbr() {
   local branches branch
@@ -76,6 +76,7 @@ ga() {
     fi
   done
 }
+
 
 lock() {
   i3lock --insidecolor=88282828 \
