@@ -9,6 +9,7 @@ inoremap (<Enter> ()<Left><CR><ESC><S-o>
 map <C-n> :NERDTreeToggle<CR>
 nmap <C-p> <Plug>AirlineSelectPrevTab
 nmap ; :Buffers
+" or default : gcc/gc
 nmap <C-_> :Commentary<CR>
 map <C-h> :Unite file_mru<CR>
 map <C-t> :TagbarToggle<CR>
