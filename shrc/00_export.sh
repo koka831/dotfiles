@@ -4,6 +4,7 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="~/dotfiles/etc/scripts:$PATH"
 export PATH="$DOTPATH/bin:$PATH"
+export EDITOR=vim
 
 #neovim
 export XDG_CONFIG_HOME="$HOME/.config"
