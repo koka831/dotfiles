@@ -16,6 +16,8 @@ else
 fi
 
 killall polybar
-exec /usr/local/bin/polybar header
+killall feh
+sleep 1s
 feh --bg-scale $HOME/Documents/wallpapers/tree.png --bg-scale $HOME/Documents/wallpapers/tree.jpg
+exec /usr/local/bin/polybar header
 
