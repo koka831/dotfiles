@@ -9,9 +9,10 @@ alias gco='git branch -a | fzf | xargs git checkout'
 alias gs='git status -s'
 alias grm='git rm --cached `git ls-files --full-name -i --exclude-from=.gitignore`'
 alias git_remove_merged="git branch --merged | grep -vE '^\*|master$|develop$' | xargs -I % git branch -d %"
-alias l='ls -lha --color=auto'
-# alias ls='ls -lha --color=auto'
-alias la='ls -lha --color=auto'
+# alias l='ls -lha --color=auto'
+# alias la='ls -lha --color=auto'
+alias l='exa -la'
+alias la='exa -abghHliS'
 alias md='mdless'
 # alias ssh=~/dotfiles/etc/scripts/ssh-change-prompt.sh
 alias subl='reattach-to-user-namespace subl'
