@@ -1,9 +1,7 @@
 # The following lines were added by compinstall
-# zstyle :compinstall filename "$HOME/.zshrc"
+zstyle :compinstall filename "$HOME/.zshrc"
 source "$HOME/.bash_profile"
 source "$HOME/dotfiles/dein/repos/github.com/morhetz/gruvbox/gruvbox_256palette.sh"
-source "$HOME/dotfiles/etc/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-
 typeset -A ZSH_HIGHLIGHT_STYLES
 
 # zsh plugin manager
@@ -16,7 +14,10 @@ zstyle ':completion:*' verbose yes
 autoload colors
 colors
 
+fpath=($HOME/.zsh/completions $fpath)
 fpath+=~/.zfunc
+autoload -U compinit && compinit
+
 export TERM='screen-256color'
 # for git repo status
 autoload -Uz vcs_info
@@ -58,3 +59,4 @@ bindkey '\C-b' backward-word
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
