@@ -61,22 +61,16 @@ build = 'make'
 repo = 'kshenoy/vim-signature'
 
 [[plugins]]
+repo = 'prabirshrestha/async.vim'
+
+[[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 
 [[plugins]]
-repo = 'roxma/vim-hug-neovim-rpc'
+repo = 'prabirshrestha/asyncomplete.vim'
 
 [[plugins]]
-repo = 'roxma/nvim-yarp'
-
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-depends = ['vim-hug-neovim-rpc', 'nvim-yarp']
-hook_add = '''
-let g:python3_host_prog = '/usr/bin/python3'
-let g:deoplete#enable_at_startup = 1
-'''
-
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
 
 # for :mks
 [[plugins]]

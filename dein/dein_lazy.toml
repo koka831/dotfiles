@@ -106,16 +106,16 @@ on_ft = ['scala']
 repo = 'gre/play2vim'
 on_ft = ['scala']
 
-[[plugins]]
-repo = 'racer-rust/vim-racer'
-on_ft = ['rust']
-hook_add = '''
-set hidden
-let g:racer_cmd = $HOME.'/.cargo/bin/racer'
-let g:racer_experimental_completer=1
-au FileType rust nmap gd <Plug>(rust-doc)
-au FileType rust nmap gs <Plug>(rust-def-vertical)
-'''
+# [[plugins]]
+# repo = 'racer-rust/vim-racer'
+# on_ft = ['rust']
+# hook_add = '''
+# set hidden
+# let g:racer_cmd = $HOME.'/.cargo/bin/racer'
+# let g:racer_experimental_completer=1
+# au FileType rust nmap gd <Plug>(rust-doc)
+# au FileType rust nmap gs <Plug>(rust-def-vertical)
+# '''
 
 [[plugins]]
 repo = 'rust-lang/rust.vim'
