@@ -91,12 +91,23 @@ let g:vim_jsx_pretty_colorful_config = 1
 '''
 
 [[plugins]]
+repo = 'othree/yajs.vim'
+on_ft = ['javascript']
+
+[[plugins]]
 repo =  'othree/javascript-libraries-syntax.vim'
 on_ft = ['javascript', 'typescript', 'javascript.jsx']
+hook_add = '''
+let b:javascript_lib_use_react = 1
+'''
 
 [[plugins]]
 repo =  'othree/es.next.syntax.vim'
 on_ft = ['javascript', 'typescript', 'javascript.jsx']
+
+[[plugins]]
+repo = 'Quramy/tsuquyomi'
+on_ft = ['typescript']
 
 [[plugins]]
 repo = 'derekwyatt/vim-scala'
@@ -106,16 +117,16 @@ on_ft = ['scala']
 repo = 'gre/play2vim'
 on_ft = ['scala']
 
-# [[plugins]]
-# repo = 'racer-rust/vim-racer'
-# on_ft = ['rust']
-# hook_add = '''
-# set hidden
-# let g:racer_cmd = $HOME.'/.cargo/bin/racer'
-# let g:racer_experimental_completer=1
-# au FileType rust nmap gd <Plug>(rust-doc)
-# au FileType rust nmap gs <Plug>(rust-def-vertical)
-# '''
+[[plugins]]
+repo = 'racer-rust/vim-racer'
+on_ft = ['rust']
+hook_add = '''
+set hidden
+let g:racer_cmd = $HOME.'/.cargo/bin/racer'
+let g:racer_experimental_completer=1
+au FileType rust nmap gd <Plug>(rust-doc)
+au FileType rust nmap gs <Plug>(rust-def-vertical)
+'''
 
 [[plugins]]
 repo = 'rust-lang/rust.vim'
@@ -207,7 +218,3 @@ on_ft = ['slim']
 [[plugins]]
 repo = 'b4winckler/vim-objc'
 on_ft = ['objc']
-
-[[plugins]]
-repo = 'docker/docker'
-on_ft = ['dockerfile', 'docker']

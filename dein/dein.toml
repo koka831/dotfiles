@@ -22,7 +22,6 @@ highlight AleErrorLine ctermfg=yellow
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 let g:ale_linters = {
-\  'python' : ['flake8'],
 \  'asm'    : ['nasm']
 \}
 '''
@@ -56,6 +55,27 @@ let g:fzf_colors =
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+let g:deoplete#enable_at_startup = 1
+'''
+
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+hook_add = '''
+let g:neosnippet#snippets_directory='~/dotfiles/.vim/userconf/neosnippet'
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'kshenoy/vim-signature'
@@ -227,3 +247,6 @@ repo = 'ap/vim-css-color'
 
 [[plugins]]
 repo = 'tpope/vim-commentary'
+
+[[plugins]]
+repo = 'gilligan/vim-lldb'
