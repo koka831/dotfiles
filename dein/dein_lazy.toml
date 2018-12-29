@@ -91,12 +91,23 @@ let g:vim_jsx_pretty_colorful_config = 1
 '''
 
 [[plugins]]
+repo = 'othree/yajs.vim'
+on_ft = ['javascript']
+
+[[plugins]]
 repo =  'othree/javascript-libraries-syntax.vim'
 on_ft = ['javascript', 'typescript', 'javascript.jsx']
+hook_add = '''
+let b:javascript_lib_use_react = 1
+'''
 
 [[plugins]]
 repo =  'othree/es.next.syntax.vim'
 on_ft = ['javascript', 'typescript', 'javascript.jsx']
+
+[[plugins]]
+repo = 'Quramy/tsuquyomi'
+on_ft = ['typescript']
 
 [[plugins]]
 repo = 'derekwyatt/vim-scala'

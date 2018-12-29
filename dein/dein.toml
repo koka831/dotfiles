@@ -22,7 +22,6 @@ highlight AleErrorLine ctermfg=yellow
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 let g:ale_linters = {
-\  'python' : ['flake8'],
 \  'asm'    : ['nasm']
 \}
 '''
@@ -58,25 +57,40 @@ repo = 'Shougo/vimproc.vim'
 build = 'make'
 
 [[plugins]]
-repo = 'kshenoy/vim-signature'
-
-[[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-
-[[plugins]]
-repo = 'roxma/vim-hug-neovim-rpc'
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+let g:deoplete#enable_at_startup = 1
+'''
 
 [[plugins]]
 repo = 'roxma/nvim-yarp'
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-depends = ['vim-hug-neovim-rpc', 'nvim-yarp']
+repo = 'roxma/vim-hug-neovim-rpc'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
 hook_add = '''
-let g:python3_host_prog = '/usr/bin/python3'
-let g:deoplete#enable_at_startup = 1
+let g:neosnippet#snippets_directory='~/dotfiles/.vim/userconf/neosnippet'
 '''
 
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'kshenoy/vim-signature'
+
+[[plugins]]
+repo = 'prabirshrestha/async.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
 
 # for :mks
 [[plugins]]
@@ -233,3 +247,6 @@ repo = 'ap/vim-css-color'
 
 [[plugins]]
 repo = 'tpope/vim-commentary'
+
+[[plugins]]
+repo = 'gilligan/vim-lldb'

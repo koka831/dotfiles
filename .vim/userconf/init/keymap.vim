@@ -19,3 +19,7 @@ imap <C-j> <Down>
 imap <C-k> <Up>
 imap <C-h> <Left>
 imap <C-l> <Right>
+
+imap <C-g> <Plug>(neosnippet_expand_or_jump)
+smap <C-g> <Plug>(neosnippet_expand_or_jump)
+xmap <C-g> <Plug>(neosnippet_expand_target)
