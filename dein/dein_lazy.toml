@@ -117,18 +117,7 @@ on_ft = ['scala']
 repo = 'gre/play2vim'
 on_ft = ['scala']
 
-[[plugins]]
-repo = 'racer-rust/vim-racer'
-on_ft = ['rust']
-hook_add = '''
-set hidden
-let g:racer_cmd = $HOME.'/.cargo/bin/racer'
-let g:racer_experimental_completer=1
-au FileType rust nmap gd <Plug>(rust-doc)
-au FileType rust nmap gs <Plug>(rust-def-vertical)
-'''
 
-[[plugins]]
 repo = 'rust-lang/rust.vim'
 on_ft = ['rs', 'rust']
 hook_add = '''
@@ -156,7 +145,7 @@ let g:python_highlight_all = 1
 '''
 
 [[plugins]]
-repo = 'davidhalter/jedi-vim'
+repo = 'deoplete-plugins/deoplete-jedi'
 on_ft = 'python'
 
 [[plugins]]
@@ -218,3 +207,23 @@ on_ft = ['slim']
 [[plugins]]
 repo = 'b4winckler/vim-objc'
 on_ft = ['objc']
+
+# ruby
+[[plugins]]
+repo = 'marcus/rsense'
+on_ft = ['ruby']
+
+[[plugins]]
+repo = 'vim-ruby/vim-ruby'
+on_ft = ['ruby']
+
+[[plugins]]
+repo = 'lifepillar/pgsql.vim'
+on_ft = ['sql']
+hook_add = '''
+let g:sql_type_default = 'pgsql'
+'''
+
+[[plugins]]
+repo = 'rgrinberg/vim-ocaml'
+on_ft = ['ocaml']

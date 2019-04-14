@@ -63,6 +63,9 @@ let g:deoplete#enable_at_startup = 1
 '''
 
 [[plugins]]
+repo = 'PieterjanMontens/vim-pipenv'
+
+[[plugins]]
 repo = 'roxma/nvim-yarp'
 
 [[plugins]]
@@ -100,7 +103,7 @@ repo = 'tpope/vim-obsession'
 repo = 'majutsushi/tagbar'
 hook_add = '''
 let g:tagbar_type_rust = {
-    \ 'ctagsbin': '/usr/local/bin/ctags',
+    \ 'ctagsbin': '/usr/bin/ctags',
     \ 'ctagstype' : 'rust',
     \ 'kinds' : [
         \'T:types,type definitions',
@@ -115,7 +118,7 @@ let g:tagbar_type_rust = {
     \}
 let g:tagbar_type_markdown = {
     \ 'ctagstype': 'markdown',
-    \ 'ctagsbin' : '$HOME/github/markdown2ctags/markdown2ctags.py',
+    \ 'ctagsbin' : '$HOME/Documents/src/go/src/github.com/jszakmeister/markdown2ctags/markdown2ctags.py',
     \ 'ctagsargs' : '-f - --sort=yes',
     \ 'kinds' : [
         \ 's:sections',
