@@ -7,6 +7,7 @@ zplug "junegunn/fzf-bin", as:command, from:gh-r
 zplug "mollifier/cd-bookmark"
 zplug "marzocchi/zsh-notify"
 zplug "soimort/translate-shell"
+zplug "changyuheng/zsh-interactive-cd"
 
 if ! zplug check --verbose; then
    printf "install zplugin? [y/N]: "
