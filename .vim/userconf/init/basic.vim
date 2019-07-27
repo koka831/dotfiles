@@ -49,3 +49,10 @@ command! -bang -nargs=* GGrep
 autocmd QuickfixCmdPost make,grep,grepadd,vimgrep if len(getqflist()) != 0 | copen | endif
 
 autocmd BufNewFile $HOME/src/github/weekly/*.md 0r $HOME/.vim/template/weekly.template
+
+" cd with ghq list and fzf
+" run: Fc<CR>
+command! -nargs=0 Fc call fzf#run({
+\ 'source': 'ghq list --full-path',
+\ 'sink': 'cd'
+\ })
