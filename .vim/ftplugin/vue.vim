@@ -1,3 +1,5 @@
+set shiftwidth=2
+
 if executable('vls')
   call lsp#register_server({
   \ 'name': 'vls',
