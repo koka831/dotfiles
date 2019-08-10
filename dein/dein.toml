@@ -1,29 +1,14 @@
 [[plugins]]
-repo = 'kana/vim-operator-user'
+repo = 'morhetz/gruvbox'
+
+# [[plugins]]
+# repo = 'kana/vim-operator-user'
 
 # for linter
 [[plugins]]
-repo = 'w0rp/ale'
+repo = 'dense-analysis/ale'
 hook_add  = '''
-let g:ale_set_signs = 1
-let g:ale_sign_error = '×'
-let g:ale_sign_warning = '×'
-let g:ale_sign_column_always = 1
-let g:ale_completion_enabled = 1
-let g:ale_lint_on_save = 1
-let g:ale_lint_on_text_changed = 0
-let g:ale_lint_on_enter = 0
-let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 1
-let g:ale_open_list = 1
-let g:ale_keep_list_window_open = 1
-let g:ale_python_flake8_executable = 'python3'
-highlight AleErrorLine ctermfg=yellow
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-
-let g:ale_linters = {
-\  'asm'    : ['nasm']
-\}
+source $HOME/dotfiles/dein/conf/ale.vim
 '''
 
 [[plugins]]
@@ -35,20 +20,7 @@ merged = 0
 repo = 'junegunn/fzf.vim'
 depends = 'junegunn/fzf'
 hook_add = '''
-let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'green'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'yellow'],
-  \ 'info':    ['fg', 'yellow'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'blue'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
+source $HOME/dotfiles/dein/conf/fzf.vim
 '''
 
 # for async
@@ -57,19 +29,25 @@ repo = 'Shougo/vimproc.vim'
 build = 'make'
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-hook_add = '''
-let g:deoplete#enable_at_startup = 1
-'''
+repo = 'Shougo/context_filetype.vim'
 
 [[plugins]]
-repo = 'PieterjanMontens/vim-pipenv'
-
-[[plugins]]
-repo = 'roxma/nvim-yarp'
+repo = 'osyo-manga/vim-precious'
+depends = 'Shougo/context_filetype.vim'
 
 [[plugins]]
 repo = 'roxma/vim-hug-neovim-rpc'
+
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+depends = ['roxma/vim-hug-neovim-rpc'] # pynvim also (pip3 install pynvim)
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+depends = ['roxma/nvim-yarp', 'roxma/vim-hug-neovim-rpc']
+hook_add = '''
+let g:deoplete#enable_at_startup = 1
+'''
 
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
@@ -77,8 +55,10 @@ hook_add = '''
 let g:neosnippet#snippets_directory='~/dotfiles/.vim/userconf/neosnippet'
 '''
 
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
+# [[plugins]]
+# repo = 'Shougo/neosnippet-snippets'
+# repo = 'koka831/neosnippet-snippets'
+# branch = 'fix/e301'
 
 [[plugins]]
 repo = 'kshenoy/vim-signature'
@@ -88,6 +68,7 @@ repo = 'prabirshrestha/async.vim'
 
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
+depends = 'prabirshrestha/async.vim'
 
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete.vim'
@@ -102,34 +83,7 @@ repo = 'tpope/vim-obsession'
 [[plugins]]
 repo = 'majutsushi/tagbar'
 hook_add = '''
-let g:tagbar_type_rust = {
-    \ 'ctagsbin': '/usr/bin/ctags',
-    \ 'ctagstype' : 'rust',
-    \ 'kinds' : [
-        \'T:types,type definitions',
-        \'f:functions,function definitions',
-        \'g:enum,enumeration names',
-        \'s:structure names',
-        \'m:modules,module names',
-        \'c:consts,static constants',
-        \'t:traits,traits',
-        \'i:impls,trait implementations',
-    \]
-    \}
-let g:tagbar_type_markdown = {
-    \ 'ctagstype': 'markdown',
-    \ 'ctagsbin' : '$HOME/Documents/src/go/src/github.com/jszakmeister/markdown2ctags/markdown2ctags.py',
-    \ 'ctagsargs' : '-f - --sort=yes',
-    \ 'kinds' : [
-        \ 's:sections',
-        \ 'i:images'
-    \ ],
-    \ 'sro' : '|',
-    \ 'kind2scope' : {
-        \ 's' : 'section',
-    \ },
-    \ 'sort': 0,
-\ }
+source $HOME/dotfiles/dein/conf/tagbar.vim
 '''
 
 # Quickfix highlighter
@@ -143,41 +97,12 @@ let g:hier_enabled = 1
 repo = 'vim-airline/vim-airline'
 depends = ['vim-fugitive']
 hook_add = '''
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-let g:airline_theme = 'gruvbox'
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#ale#enabled = 1
-let g:airline_symbols.branch = 'ᚠ'
-let g:airline#extensions#default#layout = [
-    \ ['a', 'b', 'c'],
-    \ ['x', 'y', 'z', 'error', 'warning']
-\ ]
-
-call airline#parts#define_accent('virtualenv', 'yellow')
-let g:airline_section_x = airline#section#create(['%{&filetype}'])
-let g:airline_section_y = airline#section#create(['ffenc'])
-let g:airline_section_z = airline#section#create(
-    \ ['㏑: %l', ' c: %c']
-\ )
-
-function! AirlineThemePatch(palette)
-  let a:palette.accents.running = ['#98971a', '', 'green', '', '']
-  let a:palette.accents.success = ['#98971a', '', 'green', '', '']
-  let a:palette.accents.failure = ['#9d0006', '', 'red', '', '']
-  let a:palette.accents.yellow = ['#d79921', '', 'yellow', '', 'bold']
-endfunction
-let g:airline_theme_patch_func = 'AirlineThemePatch'
+source $HOME/dotfiles/dein/conf/airline.vim
 '''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 
-[[plugins]]
-repo = 'morhetz/gruvbox'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
@@ -199,47 +124,17 @@ let NERDTreeShowHidden=1
 repo = 'Xuyuanp/nerdtree-git-plugin'
 depends = ['NERDTree']
 hook_add = '''
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "~",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ 'Ignored'   : 'i',
-    \ "Unknown"   : "?"
-    \ }
+source $HOME/dotfiles/dein/conf/NERDTree.vim
 '''
-
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
-
 [[plugins]]
 repo = 'thinca/vim-quickrun'
+depends = 'Shougo/vimproc.vim'
 hook_add = '''
-let g:quickrun_config = get(g:, 'quickrun_config', {})
-let g:quickrun_config._ = {
-    \ 'runner'  : 'vimproc',
-    \ 'outputter': 'error',
-    \ 'outputter/error/success' : 'buffer',
-    \ 'outputter/error/error' : 'quickfix',
-    \ 'outputter/buffer/split' : 'rightbelow 8sp',
-    \ 'outputter/buffer/close_on_empty': 1
-\ }
-let g:quickrun_config.cpp = {
-    \   'type' : 'cpp/g++',
-    \   'cmdopt' : '-Wall -pedantic'
-\ }
-let g:quickrun_config.python = {
-    \ 'type'   : 'python',
-    \ 'command': 'python',
-    \ 'cmdopt' : '-u'
-\ }
-au FileType qf nnoremap <silent><buffer>q :quit<CR>
+source $HOME/dotfiles/dein/conf/vim-quickrun.vim
 '''
 
 [[plugins]]
