@@ -81,6 +81,13 @@ repo = 'prabirshrestha/asyncomplete-lsp.vim'
 repo = 'tpope/vim-obsession'
 
 [[plugins]]
+repo = 'jsfaint/gen_tags.vim'
+hook_add = '''
+let g:gen_tags#ctags_auto_gen = 1
+let g:gen_tags#gtags_auto_gen = 1
+'''
+
+[[plugins]]
 repo = 'majutsushi/tagbar'
 hook_add = '''
 source $HOME/dotfiles/dein/conf/tagbar.vim
@@ -138,6 +145,9 @@ source $HOME/dotfiles/dein/conf/vim-quickrun.vim
 '''
 
 [[plugins]]
+repo = 'janko/vim-test'
+
+[[plugins]]
 repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
@@ -145,6 +155,3 @@ repo = 'ap/vim-css-color'
 
 [[plugins]]
 repo = 'tpope/vim-commentary'
-
-[[plugins]]
-repo = 'gilligan/vim-lldb'

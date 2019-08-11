@@ -11,9 +11,4 @@ let g:quickrun_config.cpp = {
     \   'type' : 'cpp/g++',
     \   'cmdopt' : '-Wall -pedantic'
 \ }
-let g:quickrun_config.python = {
-    \ 'type'   : 'python',
-    \ 'command': 'python',
-    \ 'cmdopt' : '-u'
-\ }
 au FileType qf nnoremap <silent><buffer>q :quit<CR>
