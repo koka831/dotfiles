@@ -1,3 +1,8 @@
+" 1: show abs line number / 2: relative line number
+" let g:tagbar_show_linenumbers = 2
+" use universal ctags
+let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
+
 let g:tagbar_type_rust = {
     \ 'ctagsbin': '/usr/bin/ctags',
     \ 'ctagstype' : 'rust',

@@ -6,6 +6,8 @@ let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#virtualenv#enabled = 1
+let g:airline#extensions#hunks#enabled = 0
 let g:airline_symbols.branch = 'ᚠ'
 let g:airline#extensions#default#layout = [
     \ ['a', 'b', 'c'],
