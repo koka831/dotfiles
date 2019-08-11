@@ -1,18 +1,5 @@
 " Language:     Python
 " Filenames:    *.py
-let g:ale_python_flake8_options="--ignore=E501"
-" dirty hack
-let g:ale_set_quickfix = 0
-
-
-" if executable('pyls')
-    " echo 'pyls'
-    " au User lsp_setup call lsp#register_server({
-        " \ 'name': 'pyls',
-        " \ 'cmd': {server_info->['pyls']},
-        " \ 'whitelist': ['python'],
-        " \ })
-" endif
 
 " additional syntax highlighting
 highlight link pythonFunction GruvboxGreen

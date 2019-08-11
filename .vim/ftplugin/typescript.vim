@@ -1,13 +1,5 @@
 set shiftwidth=2
 
-if executable('javascript-typescript-stdio')
-    call lsp#register_server({
-    \ 'name': 'jtls',
-    \ 'cmd': {server_info->['javascript-typescript-stdio']},
-    \ 'whitelist': ['javascript', 'typescript']
-    \ })
-endif
-
 let g:tagbar_type_typescript = {
 \ 'ctagsbin' : 'tstags',
 \ 'ctagsargs' : '-f-',
