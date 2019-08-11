@@ -66,6 +66,10 @@ on_ft = ['go']
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
+[[plugins]]
+repo = 'elzr/vim-json'
+on_ft = 'json'
+
 ### HTML,CSS,Javascript
 [[plugins]]
 repo = 'othree/html5.vim'
@@ -151,9 +155,12 @@ let g:tagbar_type_rust = {
 '''
 
 repo = 'racer-rust/vim-racer'
-on_ft = ['rust']
+on_ft = 'rust'
 hook_add = '''
 let g:racer_cmd = $HOME.'/.cargo/bin/racer'
+let g:racer_experimental_completer = 1
+au FileType rust nmap gd <Plug>(rust-doc)
+au FileType rust nmap gs <Plug>(rust-def-vertical)
 '''
 
 [[plugins]]
