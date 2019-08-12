@@ -40,26 +40,4 @@ set rtp+=/usr/local/opt/fzf
 " for :vimgrep
 set grepprg=grep\ -rnI\ --exclude-dir=.git\ --exclude-dir=node_modules\ --exclude-rir=vendor
 
-" override GGrep with fzf
-command! -bang -nargs=* GGrep
-  \ call fzf#vim#grep(
-  \   'git grep --line-number '.shellescape(<q-args>), 0,
-  \   { 'dir': systemlist('git rev-parse --show-toplevel')[0] }, <bang>0)
-
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'git grep --line-number '.shellescape(<q-args), 0,
-  \   { 'dir': systemlist('git rev-parse --show-toplevel')[0] },
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \   <bang>0)
 autocmd QuickfixCmdPost make,grep,grepadd,vimgrep if len(getqflist()) != 0 | copen | endif
-
-autocmd BufNewFile $HOME/src/github/weekly/*.md 0r $HOME/.vim/template/weekly.template
-
-" cd with ghq list and fzf
-" run: Fc<CR>
-command! -nargs=0 Fc call fzf#run({
-\ 'source': 'ghq list --full-path',
-\ 'sink': 'cd'
-\ })

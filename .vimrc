@@ -1,10 +1,6 @@
 set encoding=utf-8
 scriptencoding utf-8
-syntax on
-" when color syntax got broken
-" 1.palette.sh 
-" 2.remove cache
-" dein
+
 if &compatible
   set nocompatible
 endif
@@ -36,3 +32,4 @@ endif
 runtime! userconf/init/*.vim
 
 filetype plugin indent on
+syntax enable
