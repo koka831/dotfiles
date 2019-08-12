@@ -1,4 +1,4 @@
-set shiftwidth=2
+setlocal shiftwidth=2
 
 let g:tagbar_type_typescript = {
 \ 'ctagsbin' : 'tstags',

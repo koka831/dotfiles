@@ -1,4 +1,4 @@
-set shiftwidth=2
+setlocal shiftwidth=2
 
 " additional highlighting
 syn keyword javaScriptAdditionalKeyword require
