@@ -15,6 +15,7 @@ augroup AleLoadGroup
   let g:ale_python_flake8_options="--ignore=E501"
   let g:ale_set_highlights = 0
   let g:ale_ale_echo_msg_format = '[%severity%] %s'
+  let g:ale_rust_rls_toolchain = 'stable'
 
   nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
