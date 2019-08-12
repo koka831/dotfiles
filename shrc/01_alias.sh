@@ -4,7 +4,7 @@
 alias dc='docker-compose'
 alias g='git'
 # alias ga='git add --all'
-alias gc='git commit -v'
+alias gc='git commit -vS'
 alias gco='git branch -a | fzf | xargs git checkout'
 alias gs='git status -s'
 alias grm='git rm --cached `git ls-files --full-name -i --exclude-from=.gitignore`'

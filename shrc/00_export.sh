@@ -15,17 +15,13 @@ export XDG_CONFIG_HOME="$HOME/.config"
 ##########################################
 # for virtual env
 ##########################################
-# k8s
-export MINIKUBE_HOME=$HOME
-export KUBECONFIG=$HOME/.kube/config
-# scala
-export PATH="$HOME/.scalaenv/bin:$PATH"
-eval "$(scalaenv init -)"
-export PATH="/opt/gradle/gradle-3.4.1/bin:$PATH"
 # ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 # python
+export PATH=$HOME/.pyenv/bin:$PATH
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 eval "$(pipenv --completion)"
 export PIPENV_VENV_IN_PROJECT=true
 # golang
@@ -37,11 +33,12 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export LD_LIBRARY_PATH=$(rustc --print sysroot)/lib:$LD_LIBRARY_PATH
 
+eval "$(hub alias -s)"
 ##########################################
 # additional commands
 ##########################################
 # bat https://github.com/sharkdp/bat
-export BAT_CONFIG_DIR=$(bat cache --config-dir)
+# export BAT_CONFIG_DIR=$(bat cache --config-dir)
 
 #git::diff-highright
 export PAGER=less
