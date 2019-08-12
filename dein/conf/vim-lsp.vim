@@ -41,6 +41,15 @@ augroup LspLoadGroup
           \ })
   endif
 
+  if executable('hie')
+    au User lsp_setup call lsp#register_server({
+          \ 'name': 'hie',
+          \ 'cmd': { server_info->[&shell, &shellcmdflag, 'hie --lsp'] },
+          \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'stack.yaml')) },
+          \ 'whitelist': ['haskell']
+          \ })
+  endif
+
   let g:lsp_diagnostics_enabled = 0 " use ALE to display error/warning message
   nnoremap <buffer> <C-]> :<C-u>LspDefinition<CR>
   nnoremap <buffer> gd :sp<CR>:<C-u>LspDefinition<CR>

@@ -17,5 +17,11 @@ augroup QuickrunGroup
   let g:quickrun_config.rust = {
         \ 'exec' : 'cargo run',
         \ }
+
+  " exec single file
+  let g:quickrun_config.haskell = {
+        \ 'command': 'stack',
+        \ 'cmdpot': 'runhaskell',
+        \ }
   au FileType qf nnoremap <silent><buffer>q :quit<CR>
 augroup END

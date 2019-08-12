@@ -28,6 +28,7 @@ augroup AleLoadGroup
         \  'asm'        : ['nasm'],
         \  'python'     : ['pyls'],
         \  'rust'       : ['cargo', 'rls'],
+        \  'haskell'    : ['stack-ghc', 'hie'],
         \  'javascript' : ['javascript-language-server', 'eslint'],
         \  'typescript' : ['typescript-language-server', 'tslint'],
         \  'jsx'        : ['eslint'],
