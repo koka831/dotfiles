@@ -1,6 +1,7 @@
 .
 
 ![](./screenshot.png)
+![](./i3.png)
 
 ### target
 currently it's only for linux
