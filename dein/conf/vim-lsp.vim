@@ -41,11 +41,10 @@ augroup LspLoadGroup
           \ })
   endif
 
-  if executable('hie')
+  if executable('hie-wrapper')
     au User lsp_setup call lsp#register_server({
           \ 'name': 'hie',
-          \ 'cmd': { server_info->[&shell, &shellcmdflag, 'hie --lsp'] },
-          \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'stack.yaml')) },
+          \ 'cmd': { server_info->[&shell, &shellcmdflag, 'hie-wrapper --lsp'] },
           \ 'whitelist': ['haskell']
           \ })
   endif
