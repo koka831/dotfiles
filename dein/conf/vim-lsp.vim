@@ -49,6 +49,14 @@ augroup LspLoadGroup
           \ })
   endif
 
+  if executable('solargraph')
+    au User lsp_setup call lsp#register_server({
+          \ 'name': 'solargraph',
+          \ 'cmd': { server_info->[&shell, &shellcmdflag, 'solargraph stdio'] },
+          \ 'whitelist': ['ruby']
+          \ })
+  endif
+
   let g:lsp_diagnostics_enabled = 0 " use ALE to display error/warning message
   nnoremap <buffer> <C-]> :<C-u>LspDefinition<CR>
   nnoremap <buffer> gd :sp<CR>:<C-u>LspDefinition<CR>
