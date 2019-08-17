@@ -1,23 +1,17 @@
 #!/usr/bin/env bash
+set -Cue
 
-/usr/bin/notify-send "detected!"
+: "manage external display" && {
+  status=$(</sys/class/drm/card0-HDMI-A-1/status )
+  external=HDMI-1
+  monitor=eDP-1
+  xrandr=/usr/bin/xrandr
 
-for display in $(xrandr | grep '\Wconnected' | awk '{ print $1 }'); do
-  echo $display
-  notify-send "$display detected!"
-done
-
-if $(xrandr | grep -q 'HDMI-1 connected') ; then
-  echo 'connected'
-  xrandr --output eDP-1 --auto --dpi 180 --output HDMI-1 --auto --dpi 165 --left-of eDP-1
-else
-  echo 'disconnected'
-  xrandr --output eDP-1 --auto --primary --dpi 180
-fi
-
-killall polybar
-killall feh
-sleep 1s
-feh --bg-scale $HOME/Documents/wallpapers/tree.png --bg-scale $HOME/Documents/wallpapers/tree.jpg
-exec /usr/local/bin/polybar header
-
+  if [ "connected" == $status ]; then
+    notify-send "monitor $external connected"
+    $xrandr --output $external --rotate left --right-of $monitor --auto
+  else
+    notify-send "monitor $external disconnected"
+    $xrandr --output $external --off
+  fi
+}
