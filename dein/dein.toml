@@ -20,6 +20,7 @@ merged = 0
 repo = 'junegunn/fzf.vim'
 depends = 'junegunn/fzf'
 hook_add = '''
+set rtp+=~/.fzf
 source $HOME/dotfiles/dein/conf/fzf.vim
 '''
 
