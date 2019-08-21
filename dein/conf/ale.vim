@@ -38,6 +38,8 @@ augroup AleLoadGroup
 
   let g:ale_fixers = {
         \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+        \ 'rust': ['rustfmt'],
         \ 'javascript': ['eslint'],
+        \ 'vue': ['eslint', 'prettier']
         \ }
 augroup END
