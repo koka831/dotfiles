@@ -57,6 +57,7 @@ augroup LspLoadGroup
           \ })
   endif
 
+  let g:lsp_async_completion = 0
   let g:lsp_diagnostics_enabled = 0 " use ALE to display error/warning message
   nnoremap <buffer> <C-]> :<C-u>LspDefinition<CR>
   nnoremap <buffer> gd :sp<CR>:<C-u>LspDefinition<CR>

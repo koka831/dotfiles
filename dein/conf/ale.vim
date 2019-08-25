@@ -30,7 +30,7 @@ augroup AleLoadGroup
         \  'rust'       : ['cargo', 'rls'],
         \  'haskell'    : ['stack-build', 'hie'],
         \  'javascript' : ['javascript-language-server', 'eslint'],
-        \  'typescript' : ['typescript-language-server', 'tslint'],
+        \  'typescript' : ['tsserver', 'tslint', 'eslint'],
         \  'jsx'        : ['eslint'],
         \  'tsx'        : ['tslint', 'eslint'],
         \  'vue'        : ['eslint', 'vls']

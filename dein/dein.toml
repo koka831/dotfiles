@@ -67,9 +67,13 @@ source $HOME/dotfiles/dein/conf/vim-lsp.vim
 
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete.vim'
+hook_add = '''
+let g:asyncomplete_auto_popup = 1
+'''
 
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete-lsp.vim'
+merged = 0
 
 # for :mks
 [[plugins]]
