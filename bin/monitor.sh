@@ -9,7 +9,8 @@ set -Cue
 
   if [ "connected" == $status ]; then
     notify-send "monitor $external connected"
-    $xrandr --output $external --rotate left --right-of $monitor --auto
+    # $xrandr --output $external --rotate left --right-of $monitor --auto
+    $xrandr --output $external --right-of $monitor --auto
   else
     notify-send "monitor $external disconnected"
     $xrandr --output $external --off

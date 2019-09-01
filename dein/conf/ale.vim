@@ -26,6 +26,7 @@ augroup AleLoadGroup
 
   let g:ale_linters = {
         \  'asm'        : ['nasm'],
+        \  'markdown'   : ['textlint'],
         \  'python'     : ['pyls'],
         \  'rust'       : ['cargo', 'rls'],
         \  'haskell'    : ['stack-build', 'hie'],
