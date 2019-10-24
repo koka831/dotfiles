@@ -84,38 +84,12 @@ repo = 'wavded/vim-stylus'
 on_ft = ['stylus']
 
 [[plugins]]
-repo = 'pangloss/vim-javascript'
-on_ft = ['javascript', 'typescript', 'javascript.jsx', 'jsx', 'tsx']
-
-[[plugins]]
 repo =  'leafgarland/typescript-vim'
 on_ft = ['javascript', 'typescript', 'javascript.jsx', 'jsx', 'tsx']
 
 [[plugins]]
-repo = 'maxmellon/vim-jsx-pretty'
-on_ft = ['javascript', 'typescript', 'javascript.jsx', 'jsx', 'tsx']
-hook_add = '''
-let g:vim_jsx_pretty_colorful_config = 1
-'''
-
-[[plugins]]
-repo = 'othree/yajs.vim'
-on_ft = ['javascript', 'typescript']
-
-[[plugins]]
-repo =  'othree/javascript-libraries-syntax.vim'
-on_ft = ['javascript', 'typescript', 'javascript.jsx']
-hook_add = '''
-let b:javascript_lib_use_react = 1
-'''
-
-[[plugins]]
-repo =  'othree/es.next.syntax.vim'
-on_ft = ['javascript', 'typescript', 'javascript.jsx']
-
-[[plugins]]
 repo = 'posva/vim-vue'
-on_ft = ['javascript', 'typescript', 'vue']
+on_ft = ['javascript', 'vue']
 
 repo = 'rust-lang/rust.vim'
 on_ft = ['rs', 'rust']
@@ -126,10 +100,6 @@ on_ft = 'python'
 hook_add = '''
 let g:python_highlight_all = 1
 '''
-
-[[plugins]]
-repo = 'elixir-editors/vim-elixir'
-on_ft = 'elixir'
 
 [[plugins]]
 repo = 'neovimhaskell/haskell-vim'
@@ -151,15 +121,6 @@ on_ft = ['haskell']
 [[plugins]]
 repo = 'dag/vim2hs'
 on_ft = ['haskell']
-
-# ruby
-# [[plugins]]
-# repo = 'marcus/rsense'
-# on_ft = ['ruby']
-
-# [[plugins]]
-# repo = 'vim-ruby/vim-ruby'
-# on_ft = ['ruby']
 
 [[plugins]]
 repo = 'lifepillar/pgsql.vim'

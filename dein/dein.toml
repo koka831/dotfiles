@@ -153,3 +153,6 @@ repo = 'ap/vim-css-color'
 
 [[plugins]]
 repo = 'tpope/vim-commentary'
+
+[[plugins]]
+repo = 'hashivim/vim-terraform'
