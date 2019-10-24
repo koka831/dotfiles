@@ -17,6 +17,7 @@ augroup AleLoadGroup
   let g:ale_set_highlights = 0
   let g:ale_ale_echo_msg_format = '[%severity%] %s'
   let g:ale_rust_rls_toolchain = 'stable'
+  let g:ale_rust_cargo_use_clippy = 1
 
   nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
@@ -41,8 +42,8 @@ augroup AleLoadGroup
   let g:ale_fixers = {
         \ '*': ['remove_trailing_lines', 'trim_whitespace'],
         \ 'rust': ['rustfmt'],
-        \ 'javascript': ['eslint'],
-        \ 'typescript': ['eslint'],
+        \ 'javascript': ['eslint', 'prettier'],
+        \ 'typescript': ['eslint', 'prettier'],
         \ 'vue': ['eslint', 'prettier'],
         \ 'ruby': ['rubocop']
         \ }
