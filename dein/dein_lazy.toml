@@ -117,10 +117,6 @@ on_ft = ['javascript', 'typescript', 'javascript.jsx']
 repo = 'posva/vim-vue'
 on_ft = ['javascript', 'typescript', 'vue']
 
-[[plugins]]
-repo = 'leafgarland/typescript-vim'
-on_ft = ['ts', 'typescript']
-
 repo = 'rust-lang/rust.vim'
 on_ft = ['rs', 'rust']
 

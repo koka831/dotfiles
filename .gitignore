@@ -4,6 +4,7 @@
 .config/*
 !.config/fish
 dein/.cache/*
+dein/.vimrc/
 dein/cache_vi*
 dein/state_vi*
 dein/repos/*

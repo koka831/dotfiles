@@ -33,13 +33,13 @@ augroup LspLoadGroup
           \ })
   endif
 
-  if executable('vls')
-    au User lsp_setup call lsp#register_server({
-          \ 'name': 'vls',
-          \ 'cmd': { server_info->['vls'] },
-          \ 'whitelist': ['vue']
-          \ })
-  endif
+  " if executable('vls')
+    " au User lsp_setup call lsp#register_server({
+          " \ 'name': 'vls',
+          " \ 'cmd': { server_info->['vls'] },
+          " \ 'whitelist': ['vue', 'vuejs']
+          " \ })
+  " endif
 
   if executable('hie-wrapper')
     au User lsp_setup call lsp#register_server({
@@ -49,15 +49,16 @@ augroup LspLoadGroup
           \ })
   endif
 
-  if executable('solargraph')
-    au User lsp_setup call lsp#register_server({
-          \ 'name': 'solargraph',
-          \ 'cmd': { server_info->[&shell, &shellcmdflag, 'solargraph stdio'] },
-          \ 'whitelist': ['ruby']
-          \ })
-  endif
+  " if executable('solargraph')
+    " au User lsp_setup call lsp#register_server({
+          " \ 'name': 'solargraph',
+          " \ 'cmd': { server_info->[&shell, &shellcmdflag, 'solargraph stdio'] },
+          " \ 'whitelist': ['ruby']
+          " \ })
+  " endif
 
   let g:lsp_async_completion = 0 " use asyncomplete-lsp
+  let g:lsp_text_edit_enabled = 0
   let g:lsp_diagnostics_enabled = 0 " use ALE to display error/warning message
   nnoremap <buffer> <C-]> :<C-u>LspDefinition<CR>
   nnoremap <buffer> gd :sp<CR>:<C-u>LspDefinition<CR>

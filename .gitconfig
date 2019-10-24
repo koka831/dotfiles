@@ -1,6 +1,7 @@
 [user]
     name = koka
     email = koka.code@gmail.com
+    signingkey = FBCA28DB3AAD69A9C3D2DB162614F77BB077D125
 [color]
     ui = auto
     diff = auto
