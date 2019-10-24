@@ -13,6 +13,7 @@ alias git_remove_merged="git branch --merged | grep -vE '^\*|master$|develop$' |
 alias l='exa -la'
 alias la='exa -abghHliS'
 alias tree='tree -C'
+alias tf='terraform'
 alias t='tig'
 alias tmux='tmux -u'
 alias vi='vim'

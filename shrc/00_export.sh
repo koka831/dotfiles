@@ -36,6 +36,7 @@ export LD_LIBRARY_PATH=$(rustc --print sysroot)/lib:$LD_LIBRARY_PATH
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 
 eval "$(hub alias -s)"
+eval "$(direnv hook zsh)"
 ##########################################
 # additional commands
 ##########################################
