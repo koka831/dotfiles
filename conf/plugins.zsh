@@ -1,6 +1,7 @@
 # zplug install list
 
 zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "junegunn/fzf-bin", as:command, from:gh-r
 # zplug "b4b4r07/enhancd", use:init.sh
