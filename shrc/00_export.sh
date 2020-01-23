@@ -37,6 +37,9 @@ export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PR
 
 eval "$(hub alias -s)"
 eval "$(direnv hook zsh)"
+
+# terraform version manager
+export PATH=$HOME/.tfenv/bin:$PATH
 ##########################################
 # additional commands
 ##########################################
